@@ -1,0 +1,33 @@
+@import './exportExcelMenu.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1000px;
+    margin:  0 auto;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    tr{
+        border: none;
+    }
+
+    th{
+        text-align: left;
+        padding: 5px;
+        border: 1px solid black;
+    }
+
+    td{
+        text-align: left;
+        padding: 5px;
+        border: 1px solid black;
+    }
+}
