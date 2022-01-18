@@ -63,9 +63,7 @@
                 border-radius: 0 0 5px 5px;
                 box-shadow: 0 8px 10px 0 rgba(0,0,0,0.2);
                 background-color: #fff;
-                opacity: 0;
-                height: 0;
-                max-height: 400px;
+                display: none;
                 overflow-y: scroll;
                 overflow-x: hidden;
                 padding: 10px 0;
@@ -142,6 +140,7 @@
                     justify-content: center;
                     align-items: center;
                     font-size: 18px;
+                    pointer-events: none;
                 }
 
             }
@@ -152,8 +151,15 @@
                 background: url('../image/excel-icon.svg')no-repeat;
                 width: 45px;
                 background-size: cover;
+                pointer-events: none;
             }
             
+        }
+
+        &__backdrop{
+            opacity: 0;
+            background: transparent;
+            pointer-events: none;
         }
     }
 
@@ -163,12 +169,11 @@
                 &-list{
                     height: auto;
                     max-height: 300px;
+                    display: block;
                     opacity: 1;
-                    p{
-                        
-                    }
                 }
             }
+
             &__btn{
                 &-menu{
                     
@@ -177,6 +182,15 @@
                         transform-origin: center;
                     }
                 }
+            }
+
+            &__backdrop{
+                pointer-events: all;
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
             }
         }
     }
@@ -192,6 +206,15 @@
                         transform: scale(0.95);
                     }
                 }
+            }
+
+            &__backdrop{
+                pointer-events: all;
+                position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom: 0;
             }
         }
     }
